@@ -1,0 +1,445 @@
+/* Global styles
+----------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	color:#343434;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	background: #BDBDBD;
+}
+header {
+	background: #2F3061;
+	color: white;
+	text-align: center;
+}
+
+h1, h2 {
+	font-family: 'Caveat', cursive;
+	font-weight: 400;
+	margin: 0;
+}
+h1 {
+	font-size: 5em;
+	line-height: 1;
+}
+h2 {
+	font-size: 3em;
+}
+
+h3 ~ p {
+	margin: 0;
+}
+
+.content-wrap {
+	max-width: 800px;
+	width: 85%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.divider > section{
+	border-bottom: 2px dashed #2F3061;
+	padding: 25px;
+}
+
+.divider > section:last-of-type{
+border-bottom: none;	
+}
+
+/**
+ * Containers
+ * ----------
+ */
+
+ .site-container {
+	padding-top: 3rem;
+	padding-left: 2.5rem;
+	max-width: 33rem;
+	transition: transform 0.5s ease-out;
+	position: fixed;
+  }
+
+  .site-container:hover {
+	opacity: 80%;
+  }
+  
+  .offsite-container {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -14rem;
+	width: 14rem;
+	background-color: var(--color-grey);
+	transition: transform 0.5s ease-out;
+  }
+  
+  .offsite-is-open .site-container,
+  .offsite-is-open .offsite-container {
+	transform: translateX(14rem);
+  }
+
+  .offsite-is-open .site-container {
+	  opacity: 30%;
+  }
+
+  .offsite-is-open .site-container:hover{
+	  opacity: 100%;
+  }
+
+  
+  /**
+   * Menu button
+   * -----------
+   */
+  
+  .menu-button {
+	cursor: pointer;
+	display: inline-block;
+	position: fixed;
+  }
+  
+  .menu-button > * {
+	display: block;
+	pointer-events: none;
+  }
+  
+  .menu-button__text {
+	font-size: 0.6em;
+	margin-top: 0.5rem;
+  }
+  
+  /**
+   *  Navigation
+   * -----------
+   */
+   .nav {
+	margin-top: 3rem;
+	padding: 1em;
+	color: white;
+	background-color:  #323232;
+	font-size: 1em;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	text-transform: capitalize;
+	text-align: center;
+  }
+  .nav a {
+	display: block;
+	margin: 0;
+	padding: 0.5rem 3rem;
+	background-color: #2F3061;
+	color: white;
+  }
+  .nav a:hover {
+	background: rgba(47, 48, 97, 60%);
+	text-decoration: none;
+}
+
+/* Images
+-----------------------------*/
+img {
+	width: 300px;
+	border: 5px solid #2F3061;
+	
+}
+
+.UPS {
+	width: 750px;
+}
+
+/* projects
+----------------------------*/
+.projects {
+	padding: 10px;
+}
+
+.projects a {
+	color: white;
+	background: #2F3061;
+	padding: 8px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.projects a:hover {
+	background: rgba(47, 48, 97, 60%);
+	text-decoration: none;
+}
+
+.project-item {
+	overflow: hidden;
+}
+
+.project-item img{
+	float: left;
+	margin-right: 20px;
+}
+
+.project-item h3 {
+	margin-top: 0;
+}
+
+/* Skills
+----------------------------*/
+.skills {
+	
+}
+
+/* Work experiance
+----------------------------*/
+.work {
+	
+}
+
+.job-item {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+}
+
+
+/* Education
+----------------------------*/
+.education {
+
+}
+
+.grades {
+	display: grid;
+	grid-template-columns: repeat (1fr);
+	column-gap: 20px;
+}
+
+ /* Hobbies
+----------------------------*/
+.tab:not(.is-selected) .tab__icon {
+	color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .tab-content {
+	display: none;
+  }
+  .tab.is-selected > a {
+	background-color: #323232;
+  }
+  
+  .tab-content.is-selected {
+	display: grid;
+  }
+
+  .tabs {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	margin-bottom: 0em;
+	padding-left: 0em;
+  }
+  
+  .tabs > * {
+	flex-grow: 1;
+  }
+  
+  .tab {
+	font-size: 1em;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	text-transform: capitalize;
+	text-align: center;
+  }
+  
+  .tab > a {
+	display: block;
+	color: white;
+	background-color: #1e1e1e;
+	padding: 1em;
+	margin-bottom: 0em;
+  }
+  
+  .tab.is-selected > a {
+	background-color: #323232;
+  }
+  
+  .tab > a * {
+	pointer-events: none;
+  }
+  
+  @media screen and (min-width: 450px) {
+	.tab {
+	  text-align: left;
+	}
+  }
+  
+  .tab__title {
+	position: relative;
+	display: inline-block;
+	margin-left: 0.35em;
+	margin-top: 0.5em;
+	vertical-align: middle;
+  }
+  
+  @media screen and (min-width: 450px) {
+	.tab__title {
+	  margin-top: 0;
+	}
+  }
+  
+  /**
+   * Tab icon
+   */
+  
+  .tab__icon {
+	width: 1.75rem;
+	height: auto;
+	vertical-align: middle;
+  }
+  
+  /* Set inactive tab icons to 50% white */
+  
+  .tab:not(.is-selected) .tab__icon {
+	color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /**
+   * Tab Content
+   * -----------
+   */
+  
+  @media screen and (min-width: 850px) {
+	.tab-content-container {
+	  background-color: #323232;
+	  padding: 0.75em;
+	}
+  }
+  
+  .tab-content {
+	display: none;
+	padding: 2em;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+  }
+  
+  @media screen and (min-width: 850px) {
+	.tab-content {
+	  grid-template-columns: 1fr 1fr;
+	  align-items: stretch;
+	  grid-column-gap: 1em;
+	  padding-top: 1em;
+	  background-color:  #2F3061;
+	  color: white;
+	}
+	.tab-content > .tab-content__image {
+	  grid-column: 2;
+	}
+	.tab-content > .tab-content__info {
+	  grid-column: 1;
+	  grid-row: 1;
+	}
+  }
+  
+  .tab-content.is-selected {
+	display: grid;
+  }
+  
+  .tab-content > * + * {
+	margin-top: 1rem;
+  }
+  
+  .tab-content__image {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 15em;
+  }
+  
+  .tab-content__info {
+	margin-top: 1em;
+	background-color: #2F3061;
+	padding: 1em 1em;
+  }
+  
+  @media screen and (min-width: 850px) {
+	.tab-content__info {
+	  margin-top: 0;
+	  padding: 2em 1em;
+	}
+  }
+  
+  .tab-content__title {
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	animation-name: fade;
+	animation-duration: 3s;
+  }
+
+  @keyframes fade {
+	0% {
+	  opacity: 0;
+	}
+  
+	50% {
+	  opacity: 25;
+	}
+  
+	100% {
+	  opacity: 100;
+	}
+  }
+
+  .tab-info {
+	animation-name:fadeIn;
+	animation-duration: 3s;
+  }
+
+
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	  transform: scale(0.25);
+	}
+  
+	50% {
+	  opacity: 50;
+	  transform: scale(1);
+	}
+  
+	100% {
+	  opacity: 100;
+	}
+  }
+
+
+/* Info
+----------------------------*/
+.info {
+	background: #2F3061;
+	color: white;
+	text-align: center;
+}
+
+.info a{
+	color: white;
+}
+
+.contact-list {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-list a {
+	padding: 15px;
+}
+
+.contact-list a:hover {
+	text-decoration: none;
+}
